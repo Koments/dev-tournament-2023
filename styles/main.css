@@ -1,0 +1,432 @@
+/* Вивести кольори */
+@font-face {
+    font-family: 'tournaments-Fonts';
+    src: url('../fonts/e-UkraineHead-Bold.otf') format('otf'),
+        url('../fonts/e-UkraineHead-Light.otf') format('otf'),
+        url('../fonts/e-UkraineHead-LOGO.otf') format('otf'),
+        url('../fonts/e-UkraineHead-Medium.otf') format('otf'),
+        url('../fonts/e-UkraineHead-Regular.otf') format('otf'),
+        url('../fonts/e-UkraineHead-Thin.otf') format('otf'),
+        url('../fonts/e-UkraineHead-UltraLight.otf') format('otf'),
+        url('../fonts/Kharkiv\ Tone\ 04.10.2020.ttf') format('ttf');
+}
+
+.background-gray {
+    background-color: #EBEBEB;
+}
+
+.type-allCrimes, .background-red {
+    background-color: #ff0000;
+    color: #FFFFFF;
+}
+
+.background-white {
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.type-Death,
+.black {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    border: 1px solid #ffffff;
+}
+
+.type-Disappearance,
+.orange {
+    background-color: #F0552E;
+    color: #FFFFFF;
+}
+
+.type-Rape,
+.red {
+    background-color: #852D17;
+    color: #FFFFFF;
+}
+
+.type-Those,
+.yellow {
+    background-color: #FFA800;
+    color: #FFFFFF;
+}
+
+.type-Violation,
+.blue {
+    background-color: #76BCE3;
+    color: #FFFFFF;
+}
+
+.type-Other,
+.purple {
+    background-color: #800080;
+    color: #FFFFFF;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+body {
+    font-family: 'tournaments-Fonts', sans-serif;
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 60px;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar-item:nth-child(2) {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main-icon {
+    background: url(../assets/herb.png);
+    width: 28px;
+    height: 50px;
+}
+
+.location-icon {
+    background: url(../assets/location.png);
+    width: 20px;
+    height: 25px;
+    background-size: cover;
+}
+
+.square {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.point {
+    width: 4px;
+    height: 4px;
+    background-color: #999999;
+    margin: 0px;
+    border-radius: 25px;
+}
+
+.circle-radius {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #F0552E;
+}
+
+.download-icon {
+    background: url(../assets/download.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.ukraine-map {
+    width: 900px;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+}
+
+.city-marker {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.category-circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.map-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    height: 100%;
+}
+
+.main-header {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-header-info {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    color: #ffffff;
+}
+
+.main-footer {
+    height: 90%;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-footer-info {
+    display: grid;
+    justify-content: start;
+    width: 90%;
+    font-size: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: #ffffff;
+
+}
+
+.main-footer-info div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    font-size: 17px;
+}
+
+.option-wrapper {
+    height: 56px;
+}
+
+.option-header {
+    width: 418px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 36px;
+    margin-top: 20px;
+}
+
+.filter-padding {
+    padding: 0 36px;
+}
+
+.option-search {
+    width: 347px;
+    border: 1px solid #EBEBEB;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.option-search div {
+    background: url(../assets/magnifier.png);
+    width: 24px;
+    height: 24px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.option-search input {
+    color: #999999;
+    border: none;
+    width: 86%;
+    outline: none;
+}
+
+.filter {
+    color: #F0552E;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-line {
+    width: 23px;
+    height: 3px;
+    margin-bottom: 2px;
+    background-color: #F0552E;
+}
+
+.filter-line:nth-child(2) {
+    width: 15px;
+}
+
+.filter-line:nth-child(3) {
+    width: 7px;
+}
+
+.filter-text {
+    margin-top: 11px;
+    font-size: 13px;
+}
+
+.line {
+    border: 1px solid #EBEBEB;
+    margin: 20px 0;
+}
+
+.option-filter-list {
+    list-style-type: none;
+    padding: 0px
+}
+
+.option-filter-list li {
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 13px;
+}
+
+.option-filter-list li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option-filter-list li input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.option-filter label {
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+}
+
+.option-filter li:hover {
+    border: 1px #000000 solid;
+}
+
+.option-filter li.selected-input label::before {
+    position: absolute;
+    left: -30px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    background-color: #F0552E !important;
+    border-radius: 3px;
+}
+
+.option-filter li.selected-input:nth-child(6) label::before {
+    top: 8px;
+}
+
+.option-filter li.selected-input input[type="checkbox"]:not(:checked)+label::before {
+    content: '\2713';
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.region-list-container {
+    margin: 16px 0;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 45px;
+}
+
+.footer-result-search {
+    margin: 30px 0;
+}
+
+.result-search-nums {
+    padding-bottom: 5px;
+}
+
+.clear-container {
+    margin: 16px 0;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.clear-container div {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 10px;
+    width: 18px;
+    height: 17px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-container button {
+    border: none;
+    background-color: #ffffff;
+}
+
+.list-crimes {
+    background-color: #ffffff;
+}
+
+.result-count {
+    color: #FFA800;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.result-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.crime-name{
+    display: flex;
+    flex-wrap: wrap;
+    width: 418px;
+}
+
+.category-result-container {
+    display: flex;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-size: 17px;
+    line-height: 18px;
+    margin:5px;
+}

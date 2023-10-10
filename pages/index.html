@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-item">
+            <div class="main-icon"></div>
+        </div>
+        <div class="navbar-item ">
+            <div class="location-icon"></div>
+            <div class="square">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="navbar-item circle-radius">
+            <div class="download-icon"></div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <img class="ukraine-map" src="../assets/ukraine-map.png" alt="ukraine-map">
+
+        <div class="main-header-info">
+            <div>Help Ukraine</div>
+            <div>Log in</div>
+        </div>
+
+        <div class="markers-container"></div>
+        <div class="main-footer-info">
+            <div>
+                <div class="color-circle black"></div>
+                <div>Death of an individual</div>
+            </div>
+            <div>
+                <div class="color-circle orange"></div>
+                <div>Disappearance of an individual</div>
+            </div>
+            <div>
+                <div class="color-circle red"></div>
+                <div>Rape</div>
+            </div>
+            <div>
+                <div class="color-circle blue"></div>
+                <div>Violation of other rights</div>
+            </div>
+            <div>
+                <div class="color-circle purple"></div>
+                <div>Other types of crimes</div>
+            </div>
+            <div>
+                <div class="color-circle yellow"></div>
+                <div>Those wounded or whose health was otherwise damaged</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="option-wrapper">
+        <div class="option-header">
+            <div class="option-search">
+                <div></div>
+                <input type="text" placeholder="Search" name="search2">
+            </div>
+            <div class="filter">
+                <div class="filter-icon"></div>
+                <div class="filter-lines">
+                    <div class="filter-line"></div>
+                    <div class="filter-line"></div>
+                    <div class="filter-line"></div>
+                </div>
+                <div class="filter-text">Filters</div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="filter-padding">
+            <div class="option-filter ">
+                <h2>Filters</h2>
+                <h3>Crime Type</h3>
+                <ul class="option-filter-list">
+                    <li class="crime-option selected-input" id="Death" name="Death of an individual">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled class="new-one-select">
+                                <label>Death of an individual</label>
+                            </div>
+                            <div class="count" name="Death" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+
+                    <li class="crime-option selected-input" id="Disappearance" name="Disappearance of an individual">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled class="new-one-select">
+                                <label>Disappearance of an individual</label>
+                            </div>
+                            <div class="count" name="Disappearance" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+
+                    <li class="crime-option selected-input" id="Rape" name="Rape">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled class="new-one-select">
+                                <label>Rape</label>
+                            </div>
+                            <div class="count" name="Rape" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+
+                    <li class="crime-option selected-input" id="Violation" name="Violation of other rights">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled class="new-one-select">
+                                <label>Violation of other rights</label>
+                            </div>
+                            <div class="count" name="Violation" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+
+                    <li class="crime-option selected-input" id="Other" name="Other types of crimes">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled class="new-one-select">
+                                <label>Other types of crimes</label>
+                            </div>
+                            <div class="count" name="Other" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+
+                    <li class="crime-option selected-input"  id="Those" name="Those wounded or whose health was otherwise damaged"
+                        class="new-one-select">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled>
+                                <label>Those wounded or whose health was otherwise damaged</label>
+                            </div>
+                            <div class="count" name="Those" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+
+                    <li id="allCrimes" class="selected-input">
+                        <div bis_skin_checked="1">
+                            <div bis_skin_checked="1"><input type="checkbox" disabled>
+                                <label>All</label>
+                            </div>
+                            <div class="count" name="allCrimes" bis_skin_checked="1">0</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-region">
+                <h3 class="region">Region</h3>
+                <select name="regions" id="region-list-select" class="region-list-container region-list">
+
+                </select>
+            </div>
+
+            <div class="footer-city">
+                <h3 class="region">City / Town</h3>
+                <select name="pets" id="pet-select" class="region-list-container">
+                    <option value="all">All Cities / Towns</option>
+                </select>
+            </div>
+
+            <div class="result-of-search"></div>
+
+            <div class="result-categories">
+                <div class="crime-name">
+                    <div class="category-result-container background-red">All Crimes</div>
+                </div>
+                <div class="category-result-container background-white">
+                    <div class="town-name">All Cities / Towns</div>
+                </div>
+                <div class="background-gray category-result-container city-name">All States</div>
+            </div>
+
+            <div class="clear-container">
+                <div>&#x2715;</div>
+                <button class="clear-button">Clear All Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/utils.js"></script>
+    <script type="module" src="../scripts/filter.js"></script>
+    <script type="module" src="../scripts/options-utils.js"></script>
+    <script type="module" src="../scripts/find-location.js"></script>
+
+</body>
+
+</html>
